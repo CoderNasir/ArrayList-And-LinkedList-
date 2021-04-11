@@ -1,0 +1,31 @@
+package com.company;
+
+import java.util.*;
+
+public class LinkedListPS {
+    static void getTimeDiff(List<Integer> List){
+        long start=System.currentTimeMillis();
+        for (int  i=0;i<100000;i++){
+            List.add(0,i);
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(List.getClass().getName());
+        System.out.println(end-start);
+
+    }
+    public static void main(String[] args) {
+        List<Integer> LA=new LinkedList<>();
+        List<Integer> AA=new ArrayList<>();
+        getTimeDiff(LA);
+        getTimeDiff(AA);
+//        LA.add(10);
+//        LA.add(12);
+//        LA.add(14);
+//        System.out.println(LA);
+//        System.out.println(LA.get(2));
+//        LA.set(1,300);
+//        System.out.println(LA);
+    }
+}
+
+//Contributed By Nasir Husian
